@@ -1,6 +1,6 @@
 {
   "name": "msc-help-me-write",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "「OpenAI」 is so powerful for all kinds services. That's why I try to adopt OpenAI to help Y! Auction's seller submit merchandise quickly. With <msc-help-me-write /> support, developers just need to set some configs and everything will be all set. All user need to do is just press the trigger and <msc-help-me-write /> will display cool appearance for pick up.",
   "main": "index.html",
   "scripts": {

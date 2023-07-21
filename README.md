@@ -68,7 +68,7 @@ Otherwise, developers could also choose remoteconfig to fetch config for &lt;msc
 
 ```html
 <script type="module">
-import { YauctionHelpMeWrite } from 'https://your-domain/wc-msc-help-me-write.js';
+import { MscHelpMeWrite } from 'https://your-domain/wc-msc-help-me-write.js';
 
 // use DOM api
 const nodeA = document.createElement('msc-help-me-write');
@@ -78,20 +78,20 @@ nodeA.l10n = {
   apply: 'apply'
 };
 nodeA.webservice = {
-  url: https://your-domain/api,
+  url: 'https://your-domain/api',
   method: 'GET',
   timeout: 10000
 };
 
 // new instance with Class
-const nodeB = new YauctionHelpMeWrite();
+const nodeB = new MscHelpMeWrite();
 document.body.appendChild(nodeB);
 nodeB.l10n = {
   title: 'AI Assistant',
   apply: 'apply'
 };
 nodeB.webservice = {
-  url: https://your-domain/api,
+  url: 'https://your-domain/api',
   method: 'GET',
   timeout: 10000
 };
@@ -121,7 +121,7 @@ const config = {
   }
 };
 
-const nodeC = new YauctionHelpMeWrite(config);
+const nodeC = new MscHelpMeWrite(config);
 document.body.appendChild(nodeC);
 </script>
 ```
