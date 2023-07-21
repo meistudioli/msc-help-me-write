@@ -628,7 +628,7 @@ export class MscHelpMeWrite extends HTMLElement {
 
       const fetchUrl = new URL(url, base);
       const options = {
-        ...(Object.keys(headers) > 0 && { headers:{ ...headers } }),
+        ...(Object.keys(headers).length > 0 && { headers:{ ...headers } }),
         credentials: withCredentials ? 'include' : 'same-origin',
         method: method.toUpperCase(),
         mode: 'cors',
