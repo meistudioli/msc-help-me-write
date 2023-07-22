@@ -41,9 +41,7 @@ Put &lt;msc-help-me-write /> into HTML document. It will have different function
           "id": "mei",
           "sex": "M"
         },
-        "headers": {
-          "content-type": "application/json"
-        },
+        "headers": {},
         "method": "POST",
         "withCredentials": false,
         "timeout": 30000
