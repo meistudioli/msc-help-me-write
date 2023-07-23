@@ -622,7 +622,7 @@ export class MscHelpMeWrite extends HTMLElement {
     }
 
     try {
-      const { url, headers, method, withCredentials, timeout } = this.webservice;
+      const { url, headers = {}, method, withCredentials, timeout } = this.webservice;
       const signal = _wcl.prepareFetch(timeout);
       const base = !/^http(s)?:\/\/.*/.test(url) ? window.location.origin : undefined;
 
