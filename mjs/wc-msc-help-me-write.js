@@ -637,14 +637,19 @@ export class MscHelpMeWrite extends HTMLElement {
 
       // params
       if (/post/i.test(method)) {
-        const formData = new FormData();
+        if (headers?.['Content-Type'] === 'application/json') {
+          options.body = JSON.stringify(params);
+        } else {
+          // go with multipart/form-data
+          const formData = new FormData();
 
-        Object.keys(params).forEach(
-          (key) => {
-            formData.set(key, params[key]);
-          }
-        );
-        options.body = formData;
+          Object.keys(params).forEach(
+            (key) => {
+              formData.set(key, params[key]);
+            }
+          );
+          options.body = formData;
+        }
       } else {
         Object.keys(params).forEach(
           (key) => {

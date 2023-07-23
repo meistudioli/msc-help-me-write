@@ -41,7 +41,9 @@ Put &lt;msc-help-me-write /> into HTML document. It will have different function
           "id": "mei",
           "sex": "M"
         },
-        "headers": {},
+        "headers": {
+          "Content-Type": "application/json"
+        },
         "method": "POST",
         "withCredentials": false,
         "timeout": 30000
@@ -110,7 +112,7 @@ const config = {
         "sex": "M"
       },
       "headers": {
-        "content-type": "application/json"
+        "Content-Type": "application/json"
       },
       "method": "POST",
       "withCredentials": false,
