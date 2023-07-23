@@ -637,7 +637,7 @@ export class MscHelpMeWrite extends HTMLElement {
 
       // params
       if (/post/i.test(method)) {
-        if (headers?.['Content-Type'] === 'application/json') {
+        if (headers['Content-Type'] === 'application/json') {
           options.body = JSON.stringify(params);
         } else {
           // go with multipart/form-data
